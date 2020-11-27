@@ -9,3 +9,4 @@ app.use(cors());
 app.listen(port, () => {
   console.log(`the server is running port ${port} ...`);
 });
+
