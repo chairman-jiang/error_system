@@ -1,11 +1,7 @@
 import mysql from 'mysql';
+import { mysqlConfig } from '../config/mysql';
 
-const connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'vepalceshi123456',
-  database : 'chris'
-});
+const connection = mysql.createConnection(mysqlConfig);
 
 connection.connect((err: any) => {
   console.log(err, 'err');
