@@ -1,14 +1,14 @@
-// import mysql from 'mysql';
+import mysql from 'mysql';
 
-// const connection = mysql.createConnection({
-//   host     : 'localhost',
-//   user     : 'root',
-//   password : 'xu963210',
-//   database : 'nodejs_db'
-// });
+const connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : 'vepalceshi123456',
+  database : 'chris'
+});
 
-// connection.connect((err: any) => {
-//   console.log(err, 'err');
-// })
+connection.connect((err: any) => {
+  console.log(err, 'err');
+})
 
-// export default connection;
+export default connection;

@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node dist/index.js",
-    "dev": "nodemon --watch 'src/' -e ts --exec 'ts-node' ./src/index.ts"
+    "start": "tsc && node dist/service.js",
+    "dev": "nodemon --watch 'src/' -e ts --exec 'ts-node' ./src/service.ts"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "@types/mysql": "^2.15.15",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "errorhandler": "^1.5.1",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
     "mysql": "^2.18.1"
