@@ -1,4 +1,9 @@
 import app from '../app';
-import * as controller from '../controller';
+const { graphqlHTTP } = require('express-graphql');
+// import * as controller from '../controller';
+import * as model from '../model';
 
-app.get('/user', controller.findErrorAll);
+app.use('/errors', graphqlHTTP({
+  schema: model.userSchema,
+  graphiql: false
+}));

@@ -7,4 +7,18 @@ connection.connect((err: any) => {
   console.log(err, 'err');
 })
 
-export default connection;
+export const queryConversionPromise = (sql: string) => {
+  return new Promise((resolve, reject) => {
+    connection.query(sql, (error, results, fields) => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(results);
+      }
+    });
+  });
+};
+
+export default {
+  connection
+}
