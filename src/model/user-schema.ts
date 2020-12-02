@@ -21,7 +21,11 @@ const RootQuery = new GraphQLObjectType({
   fields: {
     errorList: {
       type: new GraphQLList(errorItemOject),
+      args: {
+        id: { type: GraphQLString }
+      },
       resolve: async (parent, arg) => {
+        console.log(arg, 'asd');
         const res = await queryConversionPromise('SELECT * FROM error_item');
         console.log()
         return res;
