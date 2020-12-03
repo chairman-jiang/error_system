@@ -1,5 +1,14 @@
-import { GraphQLObjectType, GraphQLSchema ,GraphQLString, GraphQLList } from 'graphql';
+import { GraphQLObjectType, GraphQLSchema ,GraphQLString, GraphQLList, GraphQLEnumType } from 'graphql';
 import { queryConversionPromise } from '../db';
+
+const enumType = new GraphQLEnumType({
+  name: 'RGB',
+  values: {
+    RED: { value: 0 },
+    GREEN: { value: 1 },
+    BLUE: { value: 2 }
+  }
+})
 
 const errorItemOject = new GraphQLObjectType({
   name: 'ErrorItem',
@@ -12,7 +21,8 @@ const errorItemOject = new GraphQLObjectType({
     user_name: { type: GraphQLString },
     err: { type: GraphQLString },
     info: { type: GraphQLString },
-    component: { type: GraphQLString }
+    component: { type: GraphQLString },
+    color: { type: enumType }
   }
 });
 
