@@ -1,6 +1,6 @@
 export const mysqlConfig =  {
-  host     : '192.168.112.210',
+  host     : 'xxx',
   user     : 'root',
-  password : 'vepalceshi',
-  database : 'nodejs_test'
+  password : 'xxx',
+  database : 'xxx'
 };
